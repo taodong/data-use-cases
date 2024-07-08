@@ -1,0 +1,6 @@
+name: "hide_raw_password"
+entities:
+  - name: "users"
+    properties:
+      - name: "raw_password"
+        hide: true

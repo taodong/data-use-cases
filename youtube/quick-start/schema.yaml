@@ -1,0 +1,24 @@
+name: "quick_start"
+entities:
+  - name: "users"
+    properties:
+      - name: "id"
+        type: "text"
+        constraints:
+          - type: "size"
+            min: 1
+            max: 64
+        index:
+          id: 0
+      - name: "password"
+        type: "text"
+        constraints:
+          - type: "size"
+            min: 1
+            max: 128
+      - name: "raw_password"
+        type: "text"
+        constraints:
+          - type: "size"
+            min: 12
+            max: 24

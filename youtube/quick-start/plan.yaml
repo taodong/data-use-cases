@@ -1,0 +1,19 @@
+name: "10_users_default_password"
+dialect: "mysql"
+schema: "quick_start"
+data:
+  - entity: "users"
+    count: 10
+    properties:
+      - name: "id"
+        constraints:
+          - type: "category"
+            name: "email"
+      - name: "raw_password"
+        defaultValue: "Passw@rd24"
+      - name: "password"
+        constraints:
+          - type: "alternation"
+            properties:
+              - "raw_password"
+            formula: "BCRYPT(raw_password)"
